@@ -24,16 +24,42 @@ $(document).on('pop-initialized', function(){
 		});
 	});
 
+    function setupFancybox() {
+	  $("a.fancybox").fancybox({
+	  	type: 'image'
+	  });
 
-  $("a.fancybox").fancybox({
-  	type: 'image'
-  });
+	  $('.images').each(function(index){
+	  	$(this).find('a').attr("rel","group_"+index);
+	  });
+	  $("a.fancybox_group").fancybox({
+	  	type: 'image'
+	  });
+	}
+	setupFancybox();
 
-  $('.images').each(function(index){
-  	$(this).find('a').attr("rel","group_"+index);
-  });
-  $("a.fancybox_group").fancybox({
-  	type: 'image'
+
+  $('.region .asset-type-imagegroup').live('initialize', function(e, asset){
+    var el = e.currentTarget;
+    var imagesWrap = $(el).find('.images');
+    
+    //remove any existing cycle instance
+    imagesWrap.cycle('destroy');
+
+    if (imagesWrap.find('img').length > 1){
+  		var $prevArrow = $('<a href="#" class="prev">Prev</a>').appendTo($(this).find('.image-inner')); 
+		var $nextArrow = $('<a href="#" class="next">Next</a>').appendTo($(this).find('.image-inner'));
+	} else {
+		$(this).find('.next,.prev').remove();
+	}
+	imagesWrap.cycle({ 
+	    fx:     'fade', 
+	    speed:  900, 
+	    timeout: 4000, 
+	    next:   $prevArrow, 
+	    prev:   $nextArrow
+	});
+	setupFancybox();
   });
 
 
