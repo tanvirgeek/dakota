@@ -10,6 +10,7 @@
   <!-- This script loads the Populr theming engine. Populr will automatically 
        remove it at runtime. -->
   <script src="http://populr.me/assets/developers/themer.js"></script>
+  <script src="/js/main.js"></script>
   <!-- Add any javscript your theme requires here -->
 
 </head>
@@ -55,7 +56,7 @@
                       <div class="slideshow">
                         <div class="images">
                         {{#each images}}
-                          <a href="{{{original_url}}}" class="fancybox_group slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=370 height=370}}}" width="370" height="370" /></a>
+                          <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=370 height=370}}}" width="370" height="370" /></a>
                         {{/each}}
                         </div>
                       </div>
@@ -83,7 +84,7 @@
                 <div class="slideshow">
                   <div class="images">
                   {{#each images}}
-                    <a href="{{{original_url}}}" class="fancybox_group slide-image">
+                    <a href="{{{original_url}}}" class="fancybox slide-image">
                       <img alt="{{{title}}}" src="{{{resize original_url width=440 height=280}}}" width="440" height="280" /></a>
                   {{/each}}
                   </div>
@@ -104,7 +105,7 @@
                 <div class="slideshow">
                   <div class="images">
                   {{#each images}}
-                    <a href="{{{original_url}}}" class="fancybox_group slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=257 height=257}}}" width="257" height="257"/></a>
+                    <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=257 height=257}}}" width="257" height="257"/></a>
                   {{/each}}
                   </div>
                 </div>
@@ -124,7 +125,7 @@
                 <div class="slideshow">
                   <div class="images">
                     {{#each images}}
-                      <a href="{{{original_url}}}" class="fancybox_group slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=210 height=210}}}" width="210" height="210"/></a>
+                      <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=210 height=210}}}" width="210" height="210"/></a>
                     {{/each}}
                   </div>
                 </div>
@@ -328,7 +329,7 @@
                     <div class="slideshow">
                       <div class="images">
                       {{#each images}}
-                        <a href="{{{original_url}}}" class="fancybox_group slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=930 height=396}}}" width="930" height="396" /></a>
+                        <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=930 height=396}}}" width="930" height="396" /></a>
                       {{/each}}
                       </div>
                     </div>
@@ -356,7 +357,7 @@
                 <div class="slideshow">
                   <div class="images">
                   {{#each images}}
-                    <a href="{{{original_url}}}" class="fancybox_group slide-image">
+                    <a href="{{{original_url}}}" class="fancybox slide-image">
                       <img alt="{{{title}}}" src="{{{resize original_url width=440 height=280}}}" width="440" height="280" /></a>
                   {{/each}}
                   </div>
@@ -377,7 +378,7 @@
                 <div class="slideshow">
                   <div class="images">
                   {{#each images}}
-                    <a href="{{{original_url}}}" class="fancybox_group slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=257 height=257}}}" width="257" height="257"/></a>
+                    <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=257 height=257}}}" width="257" height="257"/></a>
                   {{/each}}
                   </div>
                 </div>
@@ -397,7 +398,7 @@
                 <div class="slideshow">
                   <div class="images">
                     {{#each images}}
-                      <a href="{{{original_url}}}" class="fancybox_group slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=210 height=210}}}" width="210" height="210"/></a>
+                      <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=210 height=210}}}" width="210" height="210"/></a>
                     {{/each}}
                   </div>
                 </div>
@@ -569,6 +570,10 @@
     </div>
     <div id="bg">
       <div class="innerbg"></div>
+    </div>
+    <div id="meta">
+      {{pop_links}}
+      {{sharing}}
     </div>
     </div> <!-- //ieclass -->
   </script>
