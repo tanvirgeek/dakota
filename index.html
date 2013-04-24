@@ -52,68 +52,31 @@
             <div class="blue-frame">
               <div class="blue-frame-inner">
                   <div class="image-inner">
-                    {{#if_many images}}
-                      <div class="slideshow">
-                        <div class="images">
-                        {{#each images}}
-                          <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=370 height=370}}}" width="370" height="370" /></a>
-                        {{/each}}
-                        </div>
-                      </div>
-                    {{else}}
-                      {{#each images}}
-                        <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=370 height=370}}}" width="370" /></a>
-                      {{/each}}
-                    {{/if_many}}
+                    {{{imageslider contents width="370" height="370" prevnext-enabled=false fx="fade" crop-single=true}}}
                   </div>
                 <div class="image-text">
                   {{{title}}}
                   {{{description}}}
                 </div>
-
               </div>
             </div>
           {{/asset}}
+
           {{#asset "imagegroup" size="2"}}
             <div class="image-container wrap-anchor">
              <div class="image-title">
               {{{title}}}
              </div>
              <div class="image-inner">
-              {{#if_many images}}
-                <div class="slideshow">
-                  <div class="images">
-                  {{#each images}}
-                    <a href="{{{original_url}}}" class="fancybox slide-image">
-                      <img alt="{{{title}}}" src="{{{resize original_url width=440 height=280}}}" width="440" height="280" /></a>
-                  {{/each}}
-                  </div>
-                </div>
-              {{else}}
-                {{#each images}}
-                  <a href="{{{original_url}}}" class="fancybox single-image">
-                    <img alt="{{{title}}}" src="{{{resize original_url width=440 height=280}}}" width="440" height="280" /></a>
-                {{/each}}
-              {{/if_many}}
+                {{{imageslider contents width="440" height="280" prevnext-enabled=false fx="fade" crop-single=true}}}
             </div>
             </div>
             {{{description}}}
           {{/asset}}
+          
           {{#asset "imagegroup" size="3"}}
             <div class="image-inner">
-              {{#if_many images}}
-                <div class="slideshow">
-                  <div class="images">
-                  {{#each images}}
-                    <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=257 height=257}}}" width="257" height="257"/></a>
-                  {{/each}}
-                  </div>
-                </div>
-              {{else}}
-                {{#each images}}
-                  <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=257}}}" width="257" /></a>
-                {{/each}}
-              {{/if_many}}
+              {{{imageslider contents width="257" height="257" prevnext-enabled=false fx="fade" crop-single=true}}}
             </div>
             {{{title}}}
             {{{description}}}
@@ -121,19 +84,7 @@
 
           {{#asset "imagegroup" size="4"}}
             <div class="image-inner">
-              {{#if_many images}}
-                <div class="slideshow">
-                  <div class="images">
-                    {{#each images}}
-                      <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=210 height=210}}}" width="210" height="210"/></a>
-                    {{/each}}
-                  </div>
-                </div>
-              {{else}}
-                {{#each images}}
-                  <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=210}}}" width="210"  /></a>
-                {{/each}}
-              {{/if_many}}
+              {{{imageslider contents width="210" height="210" prevnext-enabled=false fx="fade" crop-single=true}}}
             </div>
             {{{title}}}
             {{{description}}}
@@ -325,19 +276,9 @@
             <div class="image-inner">
               <div class="frame wrap-anchor">
                 <div class="frame-inner">
-                  {{#if_many images}}
-                    <div class="slideshow">
-                      <div class="images">
-                      {{#each images}}
-                        <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=930 height=396}}}" width="930" height="396" /></a>
-                      {{/each}}
-                      </div>
-                    </div>
-                  {{else}}
-                    {{#each images}}
-                      <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=930 height=396}}}" width="930" height="396"  /></a>
-                    {{/each}}
-                  {{/if_many}}
+                  
+                  {{{imageslider contents width="930" height="396" prevnext-enabled=false fx="fade" crop-single=true}}}
+
                   <div class="image-text">
                       <div class="image-title">{{{title}}}</div>
                       <div class="caption">{{{description}}}</div>
@@ -347,46 +288,22 @@
               </div>
             </div>
           {{/asset}}
+
           {{#asset "imagegroup" size="2"}}
             <div class="image-inner">
               <div class="image-container wrap-anchor">
                <div class="image-title">
                 {{{title}}}
                </div>
-              {{#if_many images}}
-                <div class="slideshow">
-                  <div class="images">
-                  {{#each images}}
-                    <a href="{{{original_url}}}" class="fancybox slide-image">
-                      <img alt="{{{title}}}" src="{{{resize original_url width=440 height=280}}}" width="440" height="280" /></a>
-                  {{/each}}
-                  </div>
-                </div>
-              {{else}}
-                {{#each images}}
-                  <a href="{{{original_url}}}" class="fancybox single-image">
-                    <img alt="{{{title}}}" src="{{{resize original_url width=440 height=280}}}" width="440" height="280" /></a>
-                {{/each}}
-              {{/if_many}}
+               {{{imageslider contents width="440" height="280" prevnext-enabled=false fx="fade" crop-single=true}}}
               </div>
             </div>
             {{{description}}}
           {{/asset}}
+          
           {{#asset "imagegroup" size="3"}}
             <div class="image-inner">
-              {{#if_many images}}
-                <div class="slideshow">
-                  <div class="images">
-                  {{#each images}}
-                    <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=257 height=257}}}" width="257" height="257"/></a>
-                  {{/each}}
-                  </div>
-                </div>
-              {{else}}
-                {{#each images}}
-                  <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=257}}}" width="257" /></a>
-                {{/each}}
-              {{/if_many}}
+               {{{imageslider contents width="257" height="257" prevnext-enabled=false fx="fade" crop-single=true}}}
             </div>
             {{{title}}}
             {{{description}}}
@@ -394,19 +311,7 @@
 
           {{#asset "imagegroup" size="4"}}
             <div class="image-inner">
-              {{#if_many images}}
-                <div class="slideshow">
-                  <div class="images">
-                    {{#each images}}
-                      <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=210 height=210}}}" width="210" height="210"/></a>
-                    {{/each}}
-                  </div>
-                </div>
-              {{else}}
-                {{#each images}}
-                  <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=210}}}" width="210"  /></a>
-                {{/each}}
-              {{/if_many}}
+               {{{imageslider contents width="210" height="210" prevnext-enabled=false fx="fade" crop-single=true}}}
             </div>
             {{{title}}}
             {{{description}}}

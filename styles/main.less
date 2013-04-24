@@ -231,11 +231,10 @@ html .themed {
   	margin:-40px 40px -40px 0;
   }
 
-  .columnizer-col1 .asset-type-imagegroup a.single-image,
-  .columnizer-col1 .asset-type-imagegroup .slideshow {
+  .columnizer-col1 .asset-type-imagegroup img {
   	background:white;
   	display:block;
-	border:5px solid white;
+	   border:5px solid white;
   	position: relative;
   	z-index:5;
   	.box-shadow(0 0 3px rgba(0,0,0,0.65));
@@ -348,8 +347,7 @@ html .themed {
   }
   
   /****** Row of 3 ******/
-  .columnizer-col3 .asset-type-imagegroup .images,
-  .columnizer-col3 .asset-type-imagegroup a.single-image {
+  .columnizer-col3 .asset-type-imagegroup img {
   	width:257px;
   	border:5px solid white;
   	position: relative;
@@ -383,7 +381,7 @@ html .themed {
   	border:none;
   	.box-shadow(0 0px 0px rgba(0,0,0,0.75));
   }
-  .columnizer-col4 .asset-type-imagegroup a.single-image {
+  .columnizer-col4 .asset-type-imagegroup img {
   	width:210px;
   	border:5px solid white;
   	position: relative;
@@ -392,8 +390,7 @@ html .themed {
   	.box-shadow(0 0px 3px rgba(0,0,0,0.75));
   }
 
-  .columnizer-col4 .asset-type-imagegroup a.single-image:after,
-  .columnizer-col4 .asset-type-imagegroup .images:after {
+  .columnizer-col4 .asset-type-imagegroup img:after {
   	content:'';
   	width:220px;
   	height:7px;
@@ -404,8 +401,7 @@ html .themed {
   	z-index:1;
   	.box-shadow(0 1px 3px rgba(0,0,0,0.45));
   }
-  .asset-type-imagegroup .single-image,
-  .asset-type-imagegroup .slide-image {
+  .asset-type-imagegroup img {
   	line-height: 0;
   	display: block;
   }
@@ -753,6 +749,11 @@ html .themed {
   	padding:0 40px;
   	text-shadow: 
   	0 1px 3px rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.7);
+    display:block;
+    margin: 115px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
 
   }
 
@@ -962,8 +963,7 @@ html .themed {
   	.clearfix();
   }
 
-  .darkregion .columnizer-col1 .asset-type-imagegroup .single-image,
-  .darkregion .columnizer-col1 .asset-type-imagegroup .slideshow {
+  .darkregion .columnizer-col1 .asset-type-imagegroup img {
   	display:block;
   	margin:0px auto;
   	width:930px;
