@@ -11,7 +11,7 @@
   <!-- Add any styles your theme requires here -->
   <link rel="stylesheet" type="text/css" href="/fonts/cubano/stylesheet.css">
   <link rel="stylesheet/less" type="text/css" href="/styles/main.less">
-  <!-- This script loads the Populr theming engine. Populr will automatically 
+  <!-- This script loads the Populr theming engine. Populr will automatically
        remove it at runtime. -->
   <script src="http://populr.me/assets/developers/themer.js"></script>
   <script src="/js/main.js"></script>
@@ -19,19 +19,20 @@
 
 </head>
 <body>
-  <!-- Put your theme's inside this script tag. The script tag will 
+  <!-- Put your theme's inside this script tag. The script tag will
        prevent issues with quote escaping and invalid markup. -->
   <script id="theme" type="text/x-handlebars-template">
   <!--[if lt IE 7 ]> <div class="ie6"> <![endif]-->
   <!--[if IE 7 ]>    <div class="ie7"> <![endif]-->
   <!--[if IE 8 ]>    <div class="ie8"> <![endif]-->
   <!--[if IE 9 ]>    <div class="ie9"> <![endif]-->
-  
+
+
     <div class="title-area">
+      {{logo}}
       {{{title}}}
     </div>
     <div class="lightregion">
-      {{logo}}
       {{#region "columnizer" id="main-region" max_cols="4" max_auto_assets="0" dummy_content="T-1|T-1,T-2|T-1,T-2,T-3|T-1,T-2,T-3,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|I-1,I-2,I-3,I-1|V-1|V-2|V-1,V-2|V-1,V-2,V-3|V-1,V-2,V-3,V-1|D-1|D-3|D-1,D-3|D-1,D-2,D-3|D-1,D-2,D-3,D-1|E-1|E-2|E-1,E-2|E-1,E-2,E-3|E-1,E-2,E-3,E-1"}}
           {{#asset "text" size="1"}}
             <div class="divider-ornate"></div>
@@ -51,7 +52,7 @@
             {{{title}}}
             {{{body}}}
           {{/asset}}
-          
+
           {{#asset "imagegroup" size="1"}}
             <div class="divider-ornate"></div>
             <div class="blue-frame">
@@ -78,7 +79,7 @@
             </div>
             {{{description}}}
           {{/asset}}
-          
+
           {{#asset "imagegroup" size="3"}}
             <div class="image-inner">
               {{{imageslider contents width="257" height="257" prevnext-enabled=false fx="fade" crop-single=true}}}
@@ -255,7 +256,7 @@
 
 
     <div class="darkregion">
-      
+
       {{#region "columnizer" id="footer-region" max_cols="4" dummy_content="T-1|T-1,T-2|T-1,T-2,T-3|T-1,T-2,T-3,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|I-1,I-2,I-3,I-1|V-1|V-2|V-1,V-2|V-1,V-2,V-3|V-1,V-2,V-3,V-1|D-1|D-3|D-1,D-3|D-1,D-2,D-3|D-1,D-2,D-3,D-1|E-1|E-2|E-1,E-2|E-1,E-2,E-3|E-1,E-2,E-3,E-1"}}
           {{#asset "text" size="1"}}
             <div class="divider-ornate"></div>
@@ -275,13 +276,13 @@
             {{{title}}}
             {{{body}}}
           {{/asset}}
-          
+
           {{#asset "imagegroup" size="1"}}
             <div class="divider-ornate"></div>
             <div class="image-inner">
               <div class="frame wrap-anchor">
                 <div class="frame-inner">
-                  
+
                   {{{imageslider contents width="930" height="396" prevnext-enabled=false fx="fade" crop-single=true}}}
 
                   <div class="image-text">
@@ -305,7 +306,7 @@
             </div>
             {{{description}}}
           {{/asset}}
-          
+
           {{#asset "imagegroup" size="3"}}
             <div class="image-inner">
                {{{imageslider contents width="257" height="257" prevnext-enabled=false fx="fade" crop-single=true}}}

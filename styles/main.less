@@ -1,7 +1,7 @@
-// Your entire stylesheet should be nested in the "html .themed" selector. This 
-// prevents your theme from accidentally overriding any styles in the Pop editor. 
-// Also, some javascript libraries (e.g. fancybox) append dom elements directly 
-// to the body. Add the ".themed" class to those elements and you can style them 
+// Your entire stylesheet should be nested in the "html .themed" selector. This
+// prevents your theme from accidentally overriding any styles in the Pop editor.
+// Also, some javascript libraries (e.g. fancybox) append dom elements directly
+// to the body. Add the ".themed" class to those elements and you can style them
 // here as well. It's not a great solution, but at least it works!
 
 @import 'preboot';
@@ -14,6 +14,15 @@ body {
 
 #reset > .global-reset();
 
+
+html .has-logo .themed {
+  h1#pop-title {
+    border-top: 0;
+    padding-top: 0;
+    margin-top: -100px;
+    margin-left: 200px;
+  }
+}
 
 html .themed {
   &#pop {
@@ -34,15 +43,15 @@ html .themed {
   	background: url("@{base-url}/images/bg-dark-repeat.png") repeat @pop-background-color;
   }
   #bg .innerbg {
-  	
+
   }
-  
+
   #main-content {
   	text-align:center;
   }
 
   .pop-header-bg {
-  	
+
   	width: 100%;
 	height: 900px;
 	z-index: -1;
@@ -99,7 +108,9 @@ html .themed {
   }
 
   .title-area {
-  	padding:15px 0 40px 0;
+    width: 940px;
+    margin: auto;
+  	padding: 15px 0 40px 0;
   }
 
   .divider-ornate {
@@ -196,7 +207,7 @@ html .themed {
   	margin:20px -56px;
   	position: relative;
   	.box-shadow(0 0 3px rgba(0,0,0,0.65));
-  	
+
   }
   .columnizer-col1 .asset-type-imagegroup .blue-frame:before {
   	content:'';
@@ -345,7 +356,7 @@ html .themed {
   	text-align: center;
   	vertical-align:middle;
   }
-  
+
   /****** Row of 3 ******/
   .columnizer-col3 .asset-type-imagegroup img {
   	width:257px;
@@ -362,9 +373,9 @@ html .themed {
 
 
 
-  
+
   /****** Row of 4 ******/
-  
+
   .columnizer-col4 .asset-type-imagegroup {
   	position: relative;
   }
@@ -455,13 +466,13 @@ html .themed {
     border:none;
     /* remove border since embeds are not calculated to inclue them properly */
   }
-  
+
 
   .populr-video-player > *,
   .embedded-container .embedded-object > * {
   	line-height: 1.1em;
   }
-  
+
   .video-container:after {
   	content:'';
   	width:100%;
@@ -666,7 +677,7 @@ html .themed {
     list-style-type:disc;
     line-height:1.6em;
 
-    
+
   }
 
 
@@ -677,9 +688,12 @@ html .themed {
   }
 
   #pop-logo {
-    position:relative;
-    top:-20px;
-    padding-bottom:10px;
+    padding-top: 20px;
+    text-align: left;
+    img {
+      max-height: 85px;
+      max-width: 175px;
+    }
   }
 
   h1#pop-title {
@@ -718,7 +732,7 @@ html .themed {
   ul.documents li div.title a:visited {
     color:@accent-color-link;
   }
-  
+
   div.description a:hover,
   div.body a:hover,
   ul.documents li div.title a:hover  {
@@ -752,7 +766,7 @@ html .themed {
   	font-family: @headline-font-family;
   	text-align:center;
   	padding:0 40px;
-  	text-shadow: 
+  	text-shadow:
   	0 1px 3px rgba(0,0,0,0.7);
     background-color: rgba(0,0,0,0.7);
     display:block;
@@ -829,7 +843,7 @@ html .themed {
   	color:#767676;
   	background: rgba(0,0,0,0.04);
   }
-  
+
   .columnizer-col3 .asset-type-text h2.asset-title {
   	font-size:18px;
   	color:@accent-color;
@@ -885,7 +899,7 @@ html .themed {
 
   /**********************************
 
-  Dark Region 
+  Dark Region
 
   ***********************************/
 
@@ -1001,7 +1015,7 @@ html .themed {
   	text-shadow:none;
   }
   .darkregion .image-text .caption {
-  	
+
   	display:block;
   	width:100%;
   	position: absolute;
@@ -1016,7 +1030,7 @@ html .themed {
   	padding:25px;
   	background: rgba(0,0,0,0.8);
   }
-  
+
 }
 
 
@@ -1043,4 +1057,19 @@ html .themed {
   }
   html .themed .columnizer-col1 .asset-type-imagegroup .image-text {width: 100%;}
   html .themed .columnizer-col1 .asset-type-imagegroup .image-inner {margin: 0 auto !important; float: none !important;;}
+
+  html .has-logo .themed {
+    h1#pop-title {
+      margin-top: -85px;
+      margin-left: 170px;
+    }
+
+    #pop-logo {
+      img {
+        max-height: 75px;
+        max-width: 150px;
+      }
+    }
+  }
+
 }
