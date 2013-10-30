@@ -635,6 +635,11 @@ html .themed {
   }
   .columnizer-col2 ul.documents li div.title {
   	max-width:245px;
+    word-wrap: break-word;
+  }
+  .columnizer-col3 ul.documents li div.title {
+    max-width: 185px;
+    word-wrap: break-word;
   }
   .columnizer-col3 ul.documents li div.document-download,
   .columnizer-col4 ul.documents li div.document-download {
@@ -649,6 +654,7 @@ html .themed {
   }
   .columnizer-col4 ul.documents li div.title {
   	max-width:30px;
+    word-wrap: break-word;
   }
   .asset-type-documentgroup h2.asset-title {
 	margin-bottom:8px;
@@ -1032,19 +1038,37 @@ html .themed {
 @media screen and (max-width: 960px)  {
   #populr > .mobile-reset();
 
-  .asset-type-imagegroup .image-container, .asset-type-imagegroup .asset-inner:before, .asset-type-imagegroup .asset-inner:after { width: inherit!important; height: inherit!important; .box-shadow(0 0px 0px rgba(0,0,0,0))!important; background: transparent!important; }
+  .asset-type-imagegroup .image-container, .asset-type-imagegroup .asset-inner:before, .asset-type-imagegroup .asset-inner:after {
+    width: inherit!important;
+    height: inherit!important;
+    .box-shadow(0 0px 0px rgba(0,0,0,0))!important;
+    background: transparent!important;
+  }
   .asset-type-imagegroup .image-title { width: 100%!important; }
-  .asset-type-imagegroup .image-container img { min-width: 100%!important;}
+  .asset-type-imagegroup .image-container img { min-width: 100%!important; }
 
-  .title-area, .lightregion, .darkregion { width:auto !important; padding:10px !important; }
+  .title-area, .lightregion, .darkregion {
+    width:auto !important;
+    padding:10px !important;
+  }
   .divider-ornate { width: 100% !important; }
-  h2.asset-title { font-size: 32px !important; padding:0; margin: 19px 0 14px 0 !important; }
+  h2.asset-title {
+    font-size: 32px !important;
+    padding:0;
+    margin: 19px 0 14px 0 !important;
+  }
   .image-inner { margin:0 !important; }
-  .description { font-size: 15px !important;padding: 0 !important;margin: 0 !important;
+  .description {
+    font-size: 15px !important;
+    padding: 0 !important;
+    margin: 0 !important;
     .image-text .asset-title { margin: 14px 0 5px 0 !important; }
   }
   html .themed .columnizer-col1 .asset-type-imagegroup .image-text {width: 100%;}
-  html .themed .columnizer-col1 .asset-type-imagegroup .image-inner {margin: 0 auto !important; float: none !important;;}
+  html .themed .columnizer-col1 .asset-type-imagegroup .image-inner {
+    margin: 0 auto !important;
+    float: none !important;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 960px) {
@@ -1057,10 +1081,42 @@ html .themed {
 }
 
 @media screen and (max-width: 480px) {
+  .title-area, .lightregion { width: 88% !important; }
+  .darkregion {
+    width: 92% !important;
+    max-width: 359px;
+  .frame { width: inherit !important; height: inherit !important; }
+  .frame-mask { background-size: 367px 168px !important; top: -8px !important; left: -5px !important; }
+  .image-text .caption { display: inline; position: relative !important; }
+  .caption .description { background: none !important; }
+  .asset-size-1 .image-title { padding-top: 0 !important; }
+  .image-text { position: relative !important; }
+  .columnizer-row-inner { max-width: 359px !important; }
+  .asset-type-imagegroup .image-title { width: 100%!important; }
+  .asset-type-imagegroup .image-container img { min-width: 100%!important; }
+    .image-inner { width: 100% !important; height: 100% !important; }
+    .description { width: 98% !important; }
+    .document-item .title { max-width: 150px !important; word-wrap: break-word !important;}
+  }
+
   h1#pop-title {
     font-size: 40px !important;
   }
   .title-area {
     padding: 15px !important;
+  }
+  .columnizer-col1 {
+    .image-inner { width: 100% !important; height: 100% !important; }
+    .description { width: 98% !important; }
+  }
+
+  html .themed .lightregion .columnizer-col1 .asset-type-imagegroup .image-inner:before,   html .themed .lightregion .columnizer-col1 .asset-type-imagegroup .image-inner:after {
+    width: 98% !important;
+    height: 98% !important;
+  }
+  html .themed .lightregion:after { width: 100% !important; }
+
+  .document-item {
+    .title { max-width: 250px !important; word-wrap:break-word; }
   }
 }
