@@ -331,19 +331,22 @@ html .themed {
   	.box-shadow(0 0 3px rgba(0,0,0,0.75));
   }
 
-  // .columnizer-col2 .asset-type-imagegroup a {
-  // 	display:block;
-  // 	line-height: 0;
-  // }
+  .lightregion .columnizer-col2 .asset-type-imagegroup .image-title {
+    position: relative;
+    z-index: 200;
+  }
 
-  .columnizer-col2 .asset-type-imagegroup .image-title {
-  	display:table;
-  	position: absolute;
-  	left:0;
-  	top:0;
-  	z-index:100;
-	width: 440px;
-	height: 280px;
+  .lightregion .asset-size-2 .image-inner .slide {
+    margin-top: -62%;
+  }
+
+  .darkregion .columnizer-col2 .asset-type-imagegroup .image-title {
+    position: relative;
+    z-index: 200;
+  }
+
+  .darkregion .asset-size-2 .image-inner .slide {
+    margin-top: -63%;
   }
 
   .ie7 .columnizer-col2 .asset-type-imagegroup .image-title {
@@ -1050,6 +1053,9 @@ html .themed {
   .asset-type-imagegroup .image-title { width: 100%!important; }
   .asset-type-imagegroup .image-container img { min-width: 100%!important; }
 
+  html .themed .lightregion .asset-size-2 .image-inner .slide { margin-top: -90px !important; }
+  html .themed .darkregion .asset-size-2 .image-inner .slide { margin-top: -90px !important; }
+
   html .themed .lightregion .columnizer-col1 .asset-type-imagegroup .image-inner:before,   html .themed .lightregion .columnizer-col1 .asset-type-imagegroup .image-inner:after {
     width: 632px !important;
     height: 632px !important;
@@ -1139,6 +1145,7 @@ html .themed {
     .description { width: 98% !important; }
     .document-item .title { max-width: 150px !important; word-wrap: break-word !important;}
   }
+
 
   h1#pop-title {
     font-size: 40px !important;
